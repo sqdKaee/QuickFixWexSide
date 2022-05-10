@@ -1,2 +1,2 @@
 # QuickFixWexSide
-fix kondrms matrix config to PATCH hacks
+please install this zaebalo ushe s 4iterami igrat'
