@@ -1,0 +1,5 @@
+name: QuickFixWexSide
+version: 1.0
+main: lol.kondr.fix.KondrFixed
+author: [ KondrMS ]
+description: Fix WexSide elytraFLY
