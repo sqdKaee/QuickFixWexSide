@@ -58,6 +58,6 @@ public class KondrFixed extends JavaPlugin implements Listener {
 	        }
     	} catch (Error | Exception throwable) {
     		log.warning("DONT Work BYPASS?? WHATTT!!! Fixxx Kondr!!!!");
-    	}
+    		}
 	}
 }
