@@ -24,40 +24,40 @@ public class KondrFixed extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onMove5(PlayerMoveEvent event) {
 		try {
-	    	int x = event.getPlayer().getLocation().getBlockX();
-	    	int y = event.getPlayer().getLocation().getBlockY();
-	    	int z = event.getPlayer().getLocation().getBlockZ();
-	    	
-	        Location from = event.getFrom();
-	        Location to = event.getTo();
-	        double distX = to.getX() - from.getX();
-	        double distY = to.getY() - from.getY();
-	        double distZ = to.getZ() - from.getZ();
-	        double finalValue = Math.hypot(distX, distZ);
-	        if (!event.getPlayer().isOp()) {
-		        if (!event.getPlayer().isInsideVehicle() && !event.getPlayer().isGliding()) {
-			        if (event.getPlayer().getWorld().getBlockAt(x, y - 1, z).getType() == Material.ICE || event.getPlayer().getWorld().getBlockAt(x, y - 1, z).getType() == Material.PACKED_ICE) {
-			        	if (finalValue > 1.5 || finalValue < -1.5) {
-			        		event.setCancelled(true);
-			        	}
-			        } else {
-			        	if (event.getPlayer().isFlying()) {
-			        		if (finalValue > 1.4 || finalValue < -1.4) {
-				        		event.setCancelled(true);
-			        		}
-			        	} else {
-			        		if (finalValue > 1.1 || finalValue < -1.1) {
-				        		event.setCancelled(true);
-			        		}
-			        	}
-			        }
-			        if (distY > 1) {
-		        		event.setCancelled(true);
-			        }
-		        }
-	        }
-    	} catch (Error | Exception throwable) {
-    		log.warning("DONT Work BYPASS?? WHATTT!!! Fixxx Kondr!!!!");
+			int x = event.getPlayer().getLocation().getBlockX();
+			int y = event.getPlayer().getLocation().getBlockY();
+			int z = event.getPlayer().getLocation().getBlockZ();
+
+			Location from = event.getFrom();
+			Location to = event.getTo();
+			double distX = to.getX() - from.getX();
+			double distY = to.getY() - from.getY();
+			double distZ = to.getZ() - from.getZ();
+			double finalValue = Math.hypot(distX, distZ);
+			if (!event.getPlayer().isOp()) {
+				if (!event.getPlayer().isInsideVehicle() && !event.getPlayer().isGliding()) {
+					if (event.getPlayer().getWorld().getBlockAt(x, y - 1, z).getType() == Material.ICE || event.getPlayer().getWorld().getBlockAt(x, y - 1, z).getType() == Material.PACKED_ICE) {
+						if (finalValue > 1.5 || finalValue < -1.5) {
+							event.setCancelled(true);
+						}
+					} else {
+						if (event.getPlayer().isFlying()) {
+							if (finalValue > 1.4 || finalValue < -1.4) {
+								event.setCancelled(true);
+							}
+						} else {
+							if (finalValue > 1.1 || finalValue < -1.1) {
+								event.setCancelled(true);
+							}
+						}
+					}
+					if (distY > 1) {
+						event.setCancelled(true);
+					}
+				}
+			}
+		} catch (Error | Exception throwable) {
+			log.warning("DONT Work BYPASS?? WHATTT!!! Fixxx Kondr!!!!");
     		}
 	}
 }
