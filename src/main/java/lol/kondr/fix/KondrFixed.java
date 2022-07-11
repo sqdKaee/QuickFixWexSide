@@ -22,7 +22,7 @@ public class KondrFixed extends JavaPlugin implements Listener {
         log.info("Fixed WexSide Bypass EZ");
     }
 	@EventHandler
-	public void onMove5(PlayerMoveEvent event) {
+	public void onKondrFixed(PlayerMoveEvent event) {
 		try {
 			int x = event.getPlayer().getLocation().getBlockX();
 			int y = event.getPlayer().getLocation().getBlockY();
